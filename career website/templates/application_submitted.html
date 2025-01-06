@@ -1,0 +1,78 @@
+<!--<!DOCTYPE html>
+<html>
+    <head>
+        <title>APPLICATION SUBMITTED</title>
+    </head>
+    <body>
+        <h4>FULL NAME</h4>
+        <div>{{application['full name']}}</div>
+
+        <h4>EMAIL</h4>
+        <div>{{application['Email']}}</div>
+
+        <h4>LINKDIN</h4>
+        <div>{{application['linkdin']}}</div>
+
+        <h4>EDUCATION</h4>
+        <div>{{application['Education']}}</div>
+
+        <h4>WORK EXPERIENCE</h4>
+        <div>{{application['work_experience']}}</div>
+        
+        <h4>RESUME</h4>
+        <div>{{application['resume_url']}}</div>
+    </body>
+
+</html>-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Submitted</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            text-align: center;
+        }
+        .container h4 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container p {
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyZWVyJTIwbGluZXN8ZW58MHx8MHx8fDA%3D" alt="Career Image" width="1600" height="1000">
+    <div class="container">
+        <h4>Application Submitted</h4>
+        <p>Thank you for applying. Your response has been submitted.</p>
+        <p><strong>Full Name:</strong> {{application['FULLNAME']}}</p>
+        <p><strong>Email:</strong> {{application['EMAIL']}}</p>
+        <p><strong>LinkedIn:</strong> {{application['LINKED_IN']}}</p>
+        <p><strong>Education:</strong> {{application['EDUCATION']}}</p>
+        <p><strong>Work Experience:</strong> {{application['WORK_EXPERIENCE']}}</p>
+        <p><strong>Resume URL:</strong> <a href="{{application['resume_url']}}" target="_blank">{{application['resume_url']}}</a></p>
+    </div>
+</body>
+</html>
+

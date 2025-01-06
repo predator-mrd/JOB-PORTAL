@@ -1,0 +1,377 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>WebPage</title>
+    <style>
+        p {
+            color: rgb(214, 21, 21);
+            letter-spacing: 0.1em;
+            word-spacing: 1.5em;
+            line-height: 1.5;
+            text-align: center;
+            background-color: grey;
+            padding: 50px;
+            margin: 50px;
+        }
+        a {
+            color: blue; 
+        }
+        h1, h2, h3 {
+            color: gray;
+            text-align: center;
+        }
+        strong {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://plus.unsplash.com/premium_photo-1683736986776-97b7703bed6d?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Career Image" width="1500" height="1000">
+    <h1>DEV</h1>
+    <h2>PUROHIT</h2>
+    <p>My Name Is Dev</p>
+    <p>{{ message }}</p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit,
+        vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus,
+        ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,
+        tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+    </p>
+    <p>
+        Aenean convallis, odio in eleifend tristique, sem nisl tincidunt magna,
+        quis fermentum augue neque a diam. Praesent hendrerit risus a imperdiet
+        viverra. Suspendisse sed lectus id arcu viverra interdum et in arcu.
+    </p>
+    <h3>Open Positions</h3>
+    <ul>
+        {% for job in jobs %}
+        <li>
+            <h4 style="color: rgb(127, 157, 255);">{{ job['JobTitle'] }} <a href="/jobs/{{job['JobID'] }}"><button>FORM</button></a>
+            <h5 style="color: blueviolet;">{{ job['Location'] }}</h5>
+        </li>
+        {% endfor %}
+    </ul>
+    <div style="text-align: center;">
+        <button>Contact Us</button>
+    </div>
+    <a href="https://mail.google.com/mail/u/1/#inbox">MAIL SUPPORT</a>
+</body>
+</html>-->
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #main {
+            margin-top: 20px;
+        }
+        #main p {
+            color: #555;
+            letter-spacing: 0.1em;
+            word-spacing: 0.3em;
+            line-height: 1.5;
+            text-align: justify;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #main h3 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .job-listing {
+            list-style: none;
+            padding: 0;
+        }
+        .job-listing li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 20px;
+            border-left: 5px solid #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .job-listing li h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .job-listing li h5 {
+            margin: 0;
+            color: #777;
+        }
+        .job-listing li button {
+            background: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Job Portal</h1>
+        </div>
+    </header>
+    <img src="https://plus.unsplash.com/premium_photo-1683736986776-97b7703bed6d?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Career Image" width="1500" height="1000">
+    <div id="main" class="container">
+        <h3>Welcome to the Job Portal</h3>
+        <p>{{ message }}</p>
+        <h3>Open Positions</h3>
+        <ul class="job-listing">
+            {% for job in jobs %}
+            <li>
+                <h4>{{ job['JobTitle'] }}</h4>
+                <h5>{{ job['Location'] }}</h5>
+                <a href="/jobs/{{job['JobID'] }}">
+                    <button>Apply Now</button>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <p>Contact Us: support@jobportal.com | Phone: 123-456-7890</p>
+    </footer>
+</body>
+</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal - Find Your Dream Career</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --background-color: #f4f6f9;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .hero {
+            position: relative;
+            height: 70vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1000&auto=format&fit=crop&q=60');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .job-listing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .job-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .job-card:hover {
+            transform: translateY(-10px);
+        }
+        .job-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-color);
+        }
+        .job-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .job-card h5 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .apply-btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .apply-btn:hover {
+            background: var(--primary-color);
+        }
+        .newsletter {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .newsletter input {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .newsletter button {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .newsletter button:hover {
+            background: #27ae60;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Find Your Perfect Career</h1>
+        <p>Discover exciting job opportunities that match your skills and passion. Your next big career move starts here!</p>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center mb-4">Open Positions</h2>
+        <div class="job-listing">
+            {% for job in jobs %}
+            <div class="job-card">
+                <h4>{{ job['JobTitle'] }}</h4>
+                <h5><i class="fas fa-map-marker-alt"></i> {{ job['Location'] }}</h5>
+                <p>Exciting opportunity with {{ job['CompanyName'] }}</p>
+                <a href="/jobs/{{job['JobID']}}" class="apply-btn">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Stay Updated with Job Opportunities</h3>
+        <p>Subscribe to our newsletter and never miss a job opening!</p>
+        <form>
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+        <div>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

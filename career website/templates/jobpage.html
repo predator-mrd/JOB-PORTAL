@@ -1,0 +1,304 @@
+<!--<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{job.title}} - WebPage</title>
+    </head>
+    <body>
+        <h3>JobTitle</h3>
+        <p>{{job.JobTitle}}</p>
+        <h3>Location</h3>
+        <p>{{job.Location}}</p>
+        <h3>Salary</h3>
+        <p>{{job.Salary}}</p>
+        <h3>JobDescription</h3>
+        <p>{{job.JobDescription}}</p>
+        <h3>CompanyName</h3>
+        <p>{{job.CompanyName}}</p>
+        {% include 'application_form.html' %}
+    </body>
+</html>-->
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ job.JobTitle }} - WebPage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .container h3 {
+            color: #333;
+        }
+        .container p {
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Job Title</h3>
+        <p>{{ job.JobTitle }}</p>
+        <h3>Location</h3>
+        <p>{{ job.Location }}</p>
+        <h3>Salary</h3>
+        <p>{{ job.Salary }}</p>
+        <h3>Job Description</h3>
+        <p>{{ job.JobDescription }}</p>
+        <h3>Company Name</h3>
+        <p>{{ job.CompanyName }}</p>
+
+        <h4>APPLICATION FORM</h4>
+        <form action="/jobs/{{ job.JobID }}/apply" method="post">
+            <div>
+                <label>FULL NAME</label><br>
+                <input type="text" name="FULLNAME" placeholder="BRUCE WAYNE">
+            </div>
+            <div>
+                <label>EMAIL</label><br>
+                <input type="text" name="EMAIL" placeholder="BRUCEWAYNE@gmail.com">
+            </div>    
+            <div>
+                <label>LINKED_IN</label><br>
+                <input type="text" name="LINKED_IN" placeholder="https://linkedin.com">
+            </div>
+            <div>
+                <label>EDUCATION</label><br>
+                <textarea name="EDUCATION"></textarea> 
+            </div>
+            <div>
+                <label>WORK_EXPERIENCE</label><br>
+                <textarea name="WORK_EXPERIENCE"></textarea> 
+            </div>  
+            <div>
+                <label>RESUME URL</label><br>
+                <input type="text" name="resume_url"> 
+            </div>
+            <input type="submit" value="SUBMIT">
+        </form>
+    </div>
+</body>
+</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ job.JobTitle }} - Job Details</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --background-color: #f4f6f9;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .job-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1522071820081-8db9d9737166?w=1000&auto=format&fit=crop&q=60');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .job-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .job-header p {
+            font-size: 1.2rem;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        .job-details {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .job-details h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .job-details p {
+            margin-bottom: 1rem;
+        }
+        .job-meta {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .job-meta .meta-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .job-meta .meta-item i {
+            color: var(--primary-color);
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+        .application-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+        .application-form h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .application-form input,
+        .application-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="job-header">
+        <h1>{{ job.JobTitle }}</h1>
+        <p>{{ job.CompanyName }} - {{ job.Location }}</p>
+    </div>
+
+    <div class="container">
+        <div class="job-details">
+            <h3>Job Description</h3>
+            <p>{{ job.JobDescription }}</p>
+        </div>
+        
+        <div class="job-meta">
+            <div class="meta-item">
+                <i class="fas fa-briefcase"></i>
+                <div>
+                    <strong>Job Title</strong>
+                    <p>{{ job.JobTitle }}</p>
+                </div>
+            </div>
+            <div class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <strong>Location</strong>
+                    <p>{{ job.Location }}</p>
+                </div>
+            </div>
+            <div class="meta-item">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                    <strong>Salary</strong>
+                    <p>{{ job.Salary }}</p>
+                </div>
+            </div>
+            <div class="meta-item">
+                <i class="fas fa-building"></i>
+                <div>
+                    <strong>Company</strong>
+                    <p>{{ job.CompanyName }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="application-form">
+            <h4>Apply for this Position</h4>
+            <form action="/jobs/{{ job.JobID }}/apply" method="post">
+                <input type="text" name="FULLNAME" placeholder="Full Name" required>
+                <input type="email" name="EMAIL" placeholder="Email Address" required>
+                <input type="text" name="LINKED_IN" placeholder="LinkedIn Profile URL">
+                <textarea name="EDUCATION" placeholder="Education Background" rows="4" required></textarea>
+                <textarea name="WORK_EXPERIENCE" placeholder="Work Experience" rows="4" required></textarea>
+                <input type="text" name="resume_url" placeholder="Resume/CV URL" required>
+                <button type="submit" class="submit-btn">Submit Application <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
